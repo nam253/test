@@ -22,6 +22,7 @@ public class Saber : MonoBehaviour
             if (Vector3.Angle(transform.position - prevPos, hit.transform.up) > 130)
             {
                 Destroy(hit.transform.gameObject);
+                Combo.Instance.OnHitBySaber();
             }
         }
         prevPos = transform.position;
