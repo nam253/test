@@ -1,10 +1,18 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class Cube : MonoBehaviour
 {
     private bool missed = false;
+
+
+    void Start()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -16,17 +24,18 @@ public class Cube : MonoBehaviour
             Vector3 toBox = transform.position - Camera.main.transform.position;
             float dot = Vector3.Dot(Camera.main.transform.forward, toBox.normalized);
 
-            if (dot < -0.2f) // Ä«¸Þ¶ó µÚÂÊ
+            if (dot < -0.2f) // Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ï¿½
             {
                 missed = true;
 
-                // ÄÞº¸ ÃÊ±âÈ­
+                // ï¿½Þºï¿½ ï¿½Ê±ï¿½È­
                 if (Combo.Instance != null)
                 {
                     Combo.Instance.OnMissedBox();
+
                 }
 
-                Destroy(gameObject); // ¹Ú½º Á¦°Å
+                Destroy(gameObject); // ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ï¿½
             }
         }
     }
