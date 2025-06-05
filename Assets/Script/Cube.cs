@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class Cube : MonoBehaviour
 {
     private bool missed = false;
+    GameObject player;
 
 
     void Start()
     {
-
+        player = GameObject.Find("PlayerHPManager");
     }
 
     // Update is called once per frame
@@ -32,6 +33,7 @@ public class Cube : MonoBehaviour
                 if (Combo.Instance != null)
                 {
                     Combo.Instance.OnMissedBox();
+                    player.GetComponent<PlayerHpmanager>().Damage(10);
 
                 }
 

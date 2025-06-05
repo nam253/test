@@ -7,6 +7,16 @@ public class Combo : MonoBehaviour
 
     public int comboCount = 0;
     public Text comboText;
+
+    public static int score = 0;
+    public static int bestscore = 0;
+
+    public Text scoretext;
+
+    void Start()
+    {
+        
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -16,6 +26,8 @@ public class Combo : MonoBehaviour
     public void OnHitBySaber()
     {
         comboCount++;
+        score += 10;
+        
         UpdateComboUI();
     }
 
@@ -33,6 +45,6 @@ public class Combo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        scoretext.text = "Score : " + score;
     }
 }

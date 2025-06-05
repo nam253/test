@@ -18,5 +18,6 @@ public class Manager : MonoBehaviour
     public void LoadScene(int id)
     {
         SceneManager.LoadScene(id);
+       
     }
 }
