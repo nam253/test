@@ -8,15 +8,12 @@ public class PlayerHpmanager : MonoBehaviour
 
     public RawImage imgBar;
 
-    public static Text currentScoreText;
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentScoreText.text = "Score : " + Combo.score;
+        
     }
-
     public void Damage(int amount)
     {
         if (hp <= 0)
