@@ -19,6 +19,7 @@ public class ButtonManager : MonoBehaviour
     public void gamerestart()
     {
         Combo.score = 0;
+        Combo.bestscore = 0;
         SceneManager.LoadScene("selectScene");
     }
 

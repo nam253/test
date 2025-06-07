@@ -3,15 +3,15 @@ using UnityEngine.UI;
 
 public class Combo : MonoBehaviour
 {
-    public static Combo Instance;
+    public static Combo Instance; 
 
-    public int comboCount = 0;
-    public Text comboText;
+    public int comboCount = 0; //현재 콤보를 저장
+    public Text comboText; //콤보 수를 저장할 텍스트
 
-    public static int score = 0;
-    public static int bestscore = 0;
+    public static int score = 0; //점수를 저장
+    public static int bestscore = 0; //최고 점수를 저장
 
-    public Text scoretext;
+    public Text scoretext; //점수를 저장할 텍스트
 
     void Start()
     {
@@ -21,30 +21,30 @@ public class Combo : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        UpdateComboUI();
+        UpdateComboUI(); //게임 시작시 ui를 초기화
     }
     public void OnHitBySaber()
     {
-        comboCount++;
-        score += 10;
+        comboCount++; //콤보 수 증가
+        score += 10; //점수를 10 증가
         
-        UpdateComboUI();
+        UpdateComboUI(); //ui를 업데이트
     }
 
     public void OnMissedBox()
     {
-        comboCount = 0;
-        UpdateComboUI();
+        comboCount = 0; //콤보를 0으로 초기화
+        UpdateComboUI(); //ui를 업데이트
     }
 
     void UpdateComboUI()
     {
-        comboText.text = "Combo \n" + comboCount;
+        comboText.text = "Combo \n" + comboCount; //콤보와 콤보 숫자를 표시
     }
     
     // Update is called once per frame
     void Update()
     {
-        scoretext.text = "Score : " + score;
+        scoretext.text = "Score : " + score; //wjatnfmf djqepdlxm
     }
 }
