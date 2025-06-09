@@ -13,12 +13,13 @@ public class ButtonManager : MonoBehaviour
             Combo.bestscore = Combo.score;
         }
 
-        bestScoreText.text = "Best : " + Combo.bestscore.ToString();
+        bestScoreText.text = "BestScore : " + Combo.bestscore.ToString();
     }
 
     public void gamerestart()
     {
         Combo.score = 0;
+        Combo.bestscore = 0;
         SceneManager.LoadScene("selectScene");
     }
 
