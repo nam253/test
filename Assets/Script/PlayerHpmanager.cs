@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHpmanager : MonoBehaviour
 {
-    public int hp = 100; //Ã¼·Â ÃÊ±â °ªÀº 100
+    public int hp = 100; //Ã¼ï¿½ï¿½ ï¿½Ê±ï¿½ ï¿½ï¿½ï¿½ï¿½ 100
 
     public RawImage imgBar;
 
@@ -18,15 +18,15 @@ public class PlayerHpmanager : MonoBehaviour
     {
         if (hp <= 0)
         {
-            return; //´Ù½Ã °ÔÀÓ¿À¹ö ¾ÀÀ¸·Î ·Îµå µÇ´Â °ÍÀ» ¸·´Â´Ù.
+            return; //ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â´ï¿½.
         }
 
-        hp -= amount; //Ã¼·Â °¨¼Ò
-        imgBar.transform.localScale = new Vector3(hp / 100.0f, 1, 1); //ÀÌ¹ÌÁö ½ºÄÉÀÏÀ» Á¶ÀýÇÏ¿© Ã¼·Â¹Ù¸¦ ¾÷µ¥ÀÌÆ®
+        hp -= amount; //Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        imgBar.transform.localScale = new Vector3(hp / 100.0f, 1, 1); //ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ Ã¼ï¿½Â¹Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
         if (hp <= 0)
         {
-            SceneManager.LoadScene("endingScene"); //Ã¼·ÂÀÌ 0ÀÌ¶ó¸é ¾ÀÀ» ·Îµå
+            SceneManager.LoadScene("endingScene"); //Ã¼ï¿½ï¿½ï¿½ï¿½ 0ï¿½Ì¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½
 
            
         }
